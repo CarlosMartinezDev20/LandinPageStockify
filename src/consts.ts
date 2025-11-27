@@ -5,7 +5,7 @@ export const SITE_TITLE = "Stockify - Sistema de Inventario Multi-Almacén";
 export const SITE_DESCRIPTION =
   "Descarga Stockify y optimiza el control de inventario de tu empresa. Gestión multi-almacén, órdenes de compra/venta y seguimiento en tiempo real.";
 
-export const DOWNLOAD_APK_URL = "https://github.com/CarlosMartinezDev20/StockifyApp/releases/download/v1.0.0/app-release.apk";
+export const DOWNLOAD_APK_URL = "https://github.com/CarlosMartinezDev20/LandinPageStockify/releases/download/v1.0.0/app-release.apk";
 
 export const SITE_METADATA = {
   title: {
