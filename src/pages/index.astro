@@ -1,0 +1,25 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+import { Background } from '@/components/background';
+import { FAQ } from '@/components/blocks/faq';
+import { Features } from '@/components/blocks/features';
+import { Hero } from '@/components/blocks/hero';
+import { HowItWorks } from '@/components/blocks/how-it-works';
+import { Testimonials } from '@/components/blocks/testimonials';
+import DefaultLayout from '@/layouts/DefaultLayout.astro';
+---
+
+<DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION} >
+  <Background className="via-muted to-muted/80">
+    <Hero />
+    <Features />
+  </Background>
+  <HowItWorks />
+  <Testimonials client:only='react'/>
+  <Background variant="bottom">
+    <div id="faq">
+      <FAQ client:only='react'/>
+    </div>
+  </Background>
+</DefaultLayout>

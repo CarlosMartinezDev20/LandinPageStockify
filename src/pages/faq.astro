@@ -1,0 +1,23 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+import { Background } from '@/components/background';
+import { FAQ } from '@/components/blocks/faq';
+import { Testimonials } from '@/components/blocks/testimonials';
+import { DashedLine } from '@/components/dashed-line';
+import DefaultLayout from '@/layouts/DefaultLayout.astro';
+---
+<DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <div class="pt-20">
+    <Background variant="top">
+      <FAQ
+        client:only='react'
+        className="py-28 text-center lg:pt-32 lg:pb-32"
+        className2="max-w-xl lg:grid-cols-1"
+        headerTag="h1"
+      />
+    </Background>
+    <DashedLine className="mx-auto max-w-xl my-8" />
+    <Testimonials dashedLineClassName="hidden" client:only='react' />
+  </div>
+</DefaultLayout>
